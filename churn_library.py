@@ -186,19 +186,24 @@ def classification_report_image(y_train,
     # Random Forest
     plt.figure(figsize=(7, 7))
     # plt.text(0.01, 0.05, str(model.summary()), {'fontsize': 12}) old approach
-    plt.title("Random Forest Train", loc="left")
+    # plt.title("Random Forest Train", loc="left")
     plt.text(
-        0.01, 0.3,
-        str(classification_report(y_test, y_test_preds_rf, zero_division=0)),
-        {'fontsize': 10},
-        fontproperties='monospace')  # approach improved by OP -> monospace!
-    plt.text(
-        0.01, 0.7,
+        0.01, 0.4,
         str('Random Forest Test'),
         {'fontsize': 10},
         fontproperties='monospace')
     plt.text(
+        0.01, 0.1,
+        str(classification_report(y_test, y_test_preds_rf, zero_division=0)),
+        {'fontsize': 10},
+        fontproperties='monospace')  # approach improved by OP -> monospace!
+    plt.text(
         0.01, 0.9,
+        str('Random Forest Train'),
+        {'fontsize': 10},
+        fontproperties='monospace')
+    plt.text(
+        0.01, 0.6,
         str(classification_report(y_train, y_train_preds_rf, zero_division=0)),
         {'fontsize': 10},
         fontproperties='monospace')  # approach improved by OP -> monospace!
@@ -208,19 +213,24 @@ def classification_report_image(y_train,
 
     # Logistic regression
     plt.figure(figsize=(7, 7))
-    plt.title("Logistic Regression Train", loc="left")
+    # plt.title("Logistic Regression Train", loc="left")
     plt.text(
-        0.01, 0.3,
-        str(classification_report(y_train, y_train_preds_lr, zero_division=0)),
-        {'fontsize': 10},
-        fontproperties='monospace')  # approach improved by OP -> monospace!
-    plt.text(
-        0.01, 0.7,
+        0.01, 0.4,
         str('Logistic Regression Test'),
         {'fontsize': 10},
         fontproperties='monospace')
     plt.text(
+        0.01, 0.1,
+        str(classification_report(y_train, y_train_preds_lr, zero_division=0)),
+        {'fontsize': 10},
+        fontproperties='monospace')  # approach improved by OP -> monospace!
+    plt.text(
         0.01, 0.9,
+        str('Logistic Regression Train'),
+        {'fontsize': 10},
+        fontproperties='monospace')
+    plt.text(
+        0.01, 0.6,
         str(classification_report(y_test, y_test_preds_lr, zero_division=0)),
         {'fontsize': 10},
         fontproperties='monospace')  # approach improved by OP -> monospace!
